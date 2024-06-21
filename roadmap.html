@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmaps | Codemapper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* background-color: rgb(255, 255, 255); */
+        }
+
+        .html-logo {
+            width: 150px;
+            height: 150px;
+
+
+        }
+
+        .css-logo {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        .js-logo {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        .python-logo {
+            width: 150px;
+            height: 150px;
+            display: flex;
+
+        }
+
+        .c-logo {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        .java-logo {
+            width: 150px;
+            height: 150px;
+
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 6%;
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 60px;
+        }
+        .card2 {
+            position: relative;
+            
+            width: 300px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 40%;
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: -295px;
+
+        }
+        .card3 {
+            position: relative;
+            
+            width: 300px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 75%;
+            overflow: hidden;
+            perspective: 1000px;
+            box-shadow: 0 0 0 5px #ffffff80;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: -295px;
+
+        }
+
+        .card svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card2 svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card3 svg {
+            width: 48px;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+        }
+
+        .card2:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+        }
+
+        .card__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card__content2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card__content3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            transform: rotateX(-90deg);
+            transform-origin: bottom;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover .card__content {
+            transform: rotateX(0deg);
+        }
+        .card2:hover .card__content2 {
+            transform: rotateX(0deg);
+        }
+        .card3:hover .card__content3 {
+            transform: rotateX(0deg);
+        }
+
+        .card__title {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+        }
+        .card__title2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+        }
+        .card__title3 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .card:hover svg {
+            scale: 0;
+        }
+        .card2:hover svg {
+            scale: 0;
+        }
+        .card3:hover svg {
+            scale: 0;
+        }
+
+        .card__description {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+        }
+        .card__description2 {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+        }
+        .card__description3 {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+        }
+
+    
+        .Lang{
+            margin-top: 15px;
+            font-size: 30px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @media screen and (orientation: portrait){
+            .card{
+                width: 305px;
+                margin-left: 9%;
+
+            }
+            .card2{
+                width: 305px;
+                margin-left: 9%;
+                margin-right: 40%;
+                margin-top: 30%;
+
+            }
+            .card3{
+                width: 305px;
+                margin-left: 9%;
+                margin-right: 40%;
+                margin-top: 30%;
+
+            }
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="starting">
+        <!-- <h1 class="Name">Roadmaps</h1> -->
+        <!-- <h2>Welcome to Codemap's Roadmaps! Our roadmaps are designed to provide a clear and structured path to mastering various programming languages and technologies. Here's how learning with roadmaps can benefit you</h2> -->
+
+
+        <h1 class="Lang"> Frontend </h1>
+        <div class="card">
+            <a href="Hroad.html">
+                <img class="html-logo" src="https://i.ibb.co/fN9j8Fs/html-5.png" alt="html-5" border="0">
+                <div class="card__content">
+                    <p class="card__title">HTML</p>
+                    <p class="card__description">Learning HTML is the first step. With HTML, you can create simple web
+                        pages, and as you advance, you'll be able to build more complex and interactive websites. At
+                        Codemapper, we provide a structured roadmap to help you master HTML and integrate it with other web
+                        technologies.</p>
+                </div>
+            </a>
+
+        </div>
+        <div class="card2">
+            <a href="cascadingroad.html">
+                <img class=" css-logo" src="https://i.ibb.co/9gxgycZ/css-3.png" alt="html-5" border="0">
+                <div class="card__content2">
+                    <p class="card__title2">CSS</p>
+                    <p class="card__description2">Learning CSS is the second step. With CSS, you can style web 
+                        pages, as you have made in HTML Roadmap and as you advance, you'll be able to build more complex and interactive websites. At
+                        Codemapper, we provide a structured roadmap to help you master CSS and integrate it with other web
+                        technologies.</p>
+                </div>
+            </a>
+
+        </div>
+
+
+
+
+        <div class="card3">
+            <a href="javascriptroad.html">
+                <img class=" js-logo" src="https://i.ibb.co/1KcZPsZ/js.png" alt="html-5" border="0">
+                <div class="card__content3">
+                    <p class="card__title3">Javascript</p>
+                    <p class="card__description3">Learning CSS is the second step. With CSS, you can style web 
+                        pages, as you have made in HTML Roadmap and as you advance, you'll be able to build more complex and interactive websites. At
+                        Codemapper, we provide a structured roadmap to help you master CSS and integrate it with other web
+                        technologies.</p>
+                </div>
+            </a>
+
+        </div>
+
+
+
+   
+    </div>
+</body>
+
+</html>
